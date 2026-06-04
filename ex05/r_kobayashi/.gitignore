@@ -1,0 +1,19 @@
+# Python キャッシュ
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 学習結果・モデル・ログ (ディレクトリ構成に基づく)
+results/
+*.pth
+*.csv
+
+# データセット (ローカルのデータディレクトリ)
+data/
+
+# OS の隠しファイル
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook 関連
+.ipynb_checkpoints/
