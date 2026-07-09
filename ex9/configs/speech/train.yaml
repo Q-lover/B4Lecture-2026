@@ -1,0 +1,19 @@
+device: auto
+seed: 20260625
+feature_manifest: feature_cache/cmu_arctic_full/feature_manifest.jsonl
+condition: [hubert_soft, world_aux]
+speakers: [slt]
+train_split: train
+valid_split: valid
+statistics_split: train
+normalize: true
+batch_size: 256
+segment_frames: 128
+num_steps: 5000
+optimizer:
+  name: adam
+  lr: 0.0002
+  weight_decay: 0.0
+log_every: 10
+checkpoint_every: 1000
+output_dir: runs/speech_world_flow

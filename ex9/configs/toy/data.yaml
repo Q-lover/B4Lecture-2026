@@ -1,0 +1,7 @@
+dataset: moons
+num_samples: 20000
+noise: 0.18
+seed: 20260625
+split:
+  train: 0.9
+  valid: 0.1

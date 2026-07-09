@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nf-assignment"
+version = "0.1.0"
+description = "Normalizing Flow assignment repository for toy and WORLD-envelope generation tasks."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "matplotlib>=3.7",
+  "numpy>=1.24,<2.3",
+  "pyyaml>=6.0",
+  "torch>=2.0,<2.6",
+  "tqdm>=4.60",
+]
+
+[project.scripts]
+nf-prepare-speech-data = "nf_assignment.speech.prepare_data:main"
+nf-extract-speech-features = "nf_assignment.speech.extract_features:main"
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8.0",
+]
+speech = [
+  "librosa>=0.10,<0.12",
+  "numba>=0.59,<0.62",
+  "pyworld>=0.3",
+  "scipy>=1.10,<1.16",
+  "setuptools<81",
+  "soundfile>=0.12",
+]
+content = [
+  "ppgs>=0.0.9",
+  "scikit-learn>=1.0",
+  "torchaudio>=2.0,<2.6",
+]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "scripts", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

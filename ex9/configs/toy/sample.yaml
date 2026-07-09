@@ -1,0 +1,4 @@
+checkpoint: runs/toy_realnvp/checkpoint.pt
+num_samples: 4096
+seed: 20260625
+output_dir: outputs/toy_realnvp

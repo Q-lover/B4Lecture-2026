@@ -1,0 +1,12 @@
+flow: glowtts_style
+target_channels: 48
+conditioner: wavenet
+num_blocks: 6
+n_split: 4
+n_sqz: 1
+hidden_channels: 180
+kernel_size: 3
+dilation_rate: 1
+num_conditioner_layers: 3
+dropout: 0.10
+coupling: affine

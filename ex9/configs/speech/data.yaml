@@ -1,0 +1,18 @@
+dataset: cmu_arctic
+root: data/cmu_arctic
+sample_rate: 16000
+speakers:
+  download: [bdl, slt]
+  inventory: [bdl, slt]
+splits:
+  train: train
+  valid: valid
+  test: test
+manifest: data/manifests/cmu_arctic_inventory.csv
+feature_cache: feature_cache/cmu_arctic_full
+subset:
+  max_utterances: 1132
+  valid_count: 100
+  test_count: 32
+  seed: 20260625
+  split_kind: utterance_id

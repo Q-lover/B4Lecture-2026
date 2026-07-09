@@ -1,0 +1,7 @@
+flow: realnvp
+input_dim: 2
+num_layers: 16
+hidden_dims: [64, 64]
+coupling: affine
+permutation: swap
+base_distribution: diagonal_gaussian

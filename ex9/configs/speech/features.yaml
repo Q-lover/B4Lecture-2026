@@ -1,0 +1,16 @@
+world:
+  frame_period_ms: 10.0
+  coded_sp_dim: 48
+  f0_floor: 71.0
+  f0_ceil: 800.0
+conditions:
+  hubert_soft:
+    enabled: true
+    frame_period_ms: 20.0
+  ppg:
+    enabled: true
+    num_classes: 40
+    frame_period_ms: 10.0
+alignment:
+  method: linear_resample
+  target: world

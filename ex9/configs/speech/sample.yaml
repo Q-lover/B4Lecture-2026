@@ -1,0 +1,18 @@
+checkpoint: runs/speech_world_flow/checkpoint.pt
+inventory_manifest: data/manifests/cmu_arctic_inventory.csv
+path_root: .
+statistics_path: feature_cache/cmu_arctic_full/feature_statistics.json
+statistics_split: train
+source_speaker: bdl
+target_speaker: slt
+split: valid
+num_utterances: 2
+utterance_ids:
+latent_scale: 1.0
+sample_rate: 16000
+output_dir: outputs/speech_world_flow
+world:
+  frame_period_ms: 10.0
+  coded_sp_dim: 48
+  f0_floor: 71.0
+  f0_ceil: 800.0

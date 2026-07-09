@@ -1,0 +1,11 @@
+device: auto
+seed: 20260625
+batch_size: 512
+num_steps: 1200
+optimizer:
+  name: adam
+  lr: 0.001
+  weight_decay: 0.001
+log_every: 10
+checkpoint_every: 1200
+output_dir: runs/toy_realnvp
